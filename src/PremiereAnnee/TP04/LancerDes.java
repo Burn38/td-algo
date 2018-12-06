@@ -1,35 +1,32 @@
-package PremiereAnnee.TP04;
-
-import java.util.Arrays;
-import java.util.Random;
-
 public class LancerDes {
-
-    public static void main(String[] args) {
-        int[] t = genArr();
-        System.out.println(Arrays.toString(t));
-        for (int i = 1; i <= 6; i++) {
-            System.out.println(i + ": " + getBar(count(t, i)));
+	
+	public static void main (String args[]) {
+		int [] tab = new int[100];
+        int [] compteur = new int[6];
+        
+        for (int i=0;i<tab.length;i++) {
+            tab[i] = (int)(Math.random()*6)+1;
         }
-    }
-
-    public static int count(int[] arr, int val) {
-        int count = 0;
-        for (int i : arr)
-            if (i == val)
-                count++;
-        return count;
-    }
-
-    public static String getBar(int n) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 1; i <= n; i++)
-            sb.append('*');
-        return sb.toString();
-    }
-
-    public static int[] genArr() {
-        return new Random().ints(1000, 1, 7).toArray();
-    }
-
+            
+        for (int i=0;i<tab.length;i++) {
+            compteur[tab[i]-1] += 1;
+        }
+        
+        
+        // 1ere visualisation
+        for (int i=0;i<compteur.length;i++) {
+            System.out.println((i+1) + ": " + compteur[i]);
+        }
+        
+        // 2eme visualisation
+        
+        for (int i=0;i<compteur.length;i++) {
+            System.out.print("\n" + (i+1) + ": ");
+            for (int j=0;j<compteur[i];j++) {
+                System.out.print("*");
+            }
+            
+        }
+	}
 }
+
