@@ -6,10 +6,11 @@ public class ADN {
 
     // adénine (A), cytosine (C), guanine (G), thymine (T)
     static char[] chars = "ACGT".toCharArray();
+    static int brinSize = 20;
 
     public static void main(String[] args) {
-        char[] brin1 = genBrin(24);
-        char[] brin2 = genBrin(24);
+        char[] brin1 = genBrin(brinSize);
+        char[] brin2 = genBrin(brinSize);
 
         System.out.println("Brin1          : " + new String(brin1));
         System.out.println("Brin2          : " + new String(brin2));
