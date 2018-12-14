@@ -1,5 +1,3 @@
-package PremiereAnnee.TP04;
-
 import java.util.Scanner;
 
 public class SaisieValeursTableau {
