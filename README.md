@@ -8,3 +8,5 @@ Il contient pour l'instant :
    - TP02 : "src/PremiereAnnee/TP02"
    - TP03 : "src/PremiereAnnee/TP03"
    - TP04 : "src/PremiereAnnee/TP04"
+   - TP04Bis : "src/PremiereAnnee/TP04Bis"
+   - TP05 : "src/PremiereAnnee/TP05"
