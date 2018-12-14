@@ -1,26 +1,32 @@
-package PremiereAnnee.TP02;
-
 import java.util.Scanner;
 
-public class Impot {
+public class ImpotCalc {
 
-    public static void main(String args[]) {
-
+	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        double impot = 0.0;
-        int revenu = sc.nextInt();
-        int n = sc.nextInt();
-
-        double temp = revenu / n;
-        if (temp >= 0 && temp < 20000) {
-            impot = 0.125 * revenu - 50 * n;
-        } else if (temp >= 20000 && temp < 30000) {
-            impot = 0.25 * revenu - 100 * n;
-        } else if (temp >= 30000) {
-            impot = 0.5 * revenu - 200 * n;
+        
+		int revenus = sc.nextInt();
+        int parts = sc.nextInt();
+        
+        double rapport = revenus/parts;
+        double coeff1;
+        int coeff2;
+        
+        if (rapport >= 0 && rapport <= 20000) {
+            coeff1 = 0.125;
+            coeff2 = 50;
+        } else {
+            if (rapport <= 30000) {
+                coeff1 = 0.25;
+                coeff2 = 100;
+            } else {
+                coeff1 = 0.5;
+                coeff2 = 200;
+            }
         }
+        
+        int impot = (int) (revenus*coeff1-coeff2*parts);
+        
         System.out.println(impot);
-    }
+	}
 }
-
