@@ -1,19 +1,17 @@
-package PremiereAnnee.TP03;
-
-public class ArtisteAtelier2 {
-
-    public static void main(String args[]) {
-        Affichage.tourner(true, 60);
+public class ArtisteAtelier2 { 
+	
+	public static void main(String[] args){
+		// Première instruction
         Affichage.avancer(100);
-        Affichage.tourner(true, 30);
+        Affichage.tourner(true, 120);
         Affichage.avancer(100);
-        Affichage.tourner(true, 150);
+        Affichage.tourner(true,60);
         Affichage.avancer(100);
-        Affichage.tourner(true, 30);
+        Affichage.tourner(true, 120);
         Affichage.avancer(100);
-
-        /* Affichage final */
-        Affichage.afficher();
-    }
+        
+		
+		/* Affichage final */
+		Affichage.afficher();
+	}
 }
-
